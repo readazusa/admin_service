@@ -12,6 +12,15 @@
         <jdk.version>1.8</jdk.version>
         <spring.version>4.2.4.RELEASE</spring.version>
     </properties>
+    <repositories>
+        <repository>
+            <url>http://mvnrepository.com/</url>
+            <name>mvnrep</name>
+            <id>mvnrep</id>
+        </repository>
+    </repositories>
+
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -200,6 +209,7 @@
             <artifactId>json</artifactId>
             <version>20141113</version>
         </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -210,6 +220,12 @@
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
             <version>0.9.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.5.Final</version>
         </dependency>
 
         <!--<dependency>-->
@@ -248,6 +264,18 @@
     </dependencies>
     <build>
         <finalName>admin_service</finalName>
+        <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.5.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+        </plugins>
+
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -255,7 +283,6 @@
                     <include>**/*.xml</include>
                 </includes>
             </resource>
-
         </resources>
     </build>
 </project>
