@@ -1,9 +1,10 @@
 package club.lovety.trade.dao.impl;
 
-import net.sunmingchun.www.base.po.BaseSearchPO;
-import net.sunmingchun.www.trade.dao.ITradeDao;
-import net.sunmingchun.www.trade.po.OrderInfo;
-import net.sunmingchun.www.trade.po.TradeInfo;
+
+import club.lovety.base.po.BaseSearchPO;
+import club.lovety.trade.dao.ITradeDao;
+import club.lovety.trade.po.OrderInfo;
+import club.lovety.trade.po.TradeInfo;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;

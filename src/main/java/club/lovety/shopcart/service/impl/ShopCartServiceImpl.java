@@ -1,8 +1,12 @@
 package club.lovety.shopcart.service.impl;
 
+import club.lovety.base.po.BasePagePO;
+import club.lovety.item.dao.IItemDao;
+import club.lovety.item.po.ItemInfo;
 import club.lovety.shopcart.dao.IShopCartDao;
 import club.lovety.shopcart.po.ShopCartInfo;
 import club.lovety.shopcart.service.IShopCartService;
+import club.lovety.util.UuidUtils;
 import com.alibaba.fastjson.JSONObject;
 
 import org.springframework.stereotype.Service;
@@ -10,6 +14,7 @@ import org.springframework.util.Assert;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by 念梓  on 2016/8/25.

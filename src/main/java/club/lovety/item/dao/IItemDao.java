@@ -1,11 +1,9 @@
 package club.lovety.item.dao;
 
-import net.sunmingchun.www.base.dao.IDao;
-import net.sunmingchun.www.file.po.UploadFilePO;
-import net.sunmingchun.www.item.po.ItemInfo;
-import net.sunmingchun.www.item.po.ItemVsFilePO;
 
-import java.util.List;
+import club.lovety.base.dao.IDao;
+import club.lovety.item.po.ItemInfo;
+import club.lovety.item.po.ItemVsFilePO;
 
 /**
  * net.sunmingchun.www.item.dao
@@ -13,11 +11,9 @@ import java.util.List;
  * date on 2016/4/27.
  * Email:sunmch@163.com
  */
-public interface IItemDao extends IDao<ItemInfo>{
+public interface IItemDao extends IDao<ItemInfo> {
 
     public int saveItemVsFile(ItemVsFilePO itemVsFilePO);
-
-    public List<UploadFilePO> getUploadFileListByItemId(String uid);
 
     public int deleteItemVsFileByItemId(String itemId);
 }

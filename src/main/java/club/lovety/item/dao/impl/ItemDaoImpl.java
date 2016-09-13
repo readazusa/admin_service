@@ -1,17 +1,17 @@
 package club.lovety.item.dao.impl;
 
-import net.sunmingchun.www.base.po.BaseSearchPO;
-import net.sunmingchun.www.file.po.UploadFilePO;
-import net.sunmingchun.www.item.dao.IItemDao;
-import net.sunmingchun.www.item.po.ItemInfo;
-import net.sunmingchun.www.item.po.ItemVsFilePO;
-import org.apache.commons.lang3.StringUtils;
+
+import club.lovety.base.po.BaseSearchPO;
+import club.lovety.item.dao.IItemDao;
+import club.lovety.item.po.ItemInfo;
+import club.lovety.item.po.ItemVsFilePO;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+
 
 /**
  * net.sunmingchun.www.item.dao.impl
@@ -82,10 +82,7 @@ public class ItemDaoImpl extends SqlSessionDaoSupport  implements IItemDao {
         return this.getSqlSession().insert("ItemVsFilePO.save",itemVsFilePO);
     }
 
-    @Override
-    public List<UploadFilePO> getUploadFileListByItemId(String uid) {
-        return this.getSqlSession().selectList("UploadFilePO.selectFileListByItemId",uid);
-    }
+
 
     @Override
     public int deleteItemVsFileByItemId(String itemId) {

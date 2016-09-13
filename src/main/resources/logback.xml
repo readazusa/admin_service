@@ -38,10 +38,6 @@
         </layout>
     </appender>
 
-    <logger name="net.sunmingchun.www.controller.IndexController" level="debug" additivity="false">
-        <appender-ref ref="INDEX"/>
-    </logger>
-
 
     <root level="debug">
         <appender-ref ref="STDOUT" />

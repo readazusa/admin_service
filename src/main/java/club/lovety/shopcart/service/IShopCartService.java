@@ -1,7 +1,8 @@
 package club.lovety.shopcart.service;
 
-import net.sunmingchun.www.base.service.IService;
-import net.sunmingchun.www.shopcart.po.ShopCartInfo;
+
+import club.lovety.base.service.IService;
+import club.lovety.shopcart.po.ShopCartInfo;
 
 /**
  * Created by 念梓  on 2016/8/25.

@@ -1,11 +1,12 @@
 package club.lovety.trade.service.impl;
 
-import net.sunmingchun.www.base.po.BasePagePO;
-import net.sunmingchun.www.base.po.BaseSearchPO;
-import net.sunmingchun.www.trade.dao.ITradeDao;
-import net.sunmingchun.www.trade.po.OrderInfo;
-import net.sunmingchun.www.trade.po.TradeInfo;
-import net.sunmingchun.www.trade.service.ITradeService;
+
+import club.lovety.base.po.BasePagePO;
+import club.lovety.base.po.BaseSearchPO;
+import club.lovety.trade.dao.ITradeDao;
+import club.lovety.trade.po.OrderInfo;
+import club.lovety.trade.po.TradeInfo;
+import club.lovety.trade.service.ITradeService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -28,7 +29,7 @@ public class TradeServiceImpl implements ITradeService {
 
     @Override
     public TradeInfo queryObjectById(String id) {
-        TradeInfo  tradeInfo = tradeDao.queryObjectById(id);
+        TradeInfo tradeInfo = tradeDao.queryObjectById(id);
         if(tradeInfo != null){
             List<OrderInfo> orderInfos = tradeDao.queryOrderListByTradeId(id);
             tradeInfo.setOrderInfoList(orderInfos);
@@ -48,7 +49,6 @@ public class TradeServiceImpl implements ITradeService {
 
     @Override
     public void save(TradeInfo obj) {
-
     }
 
     @Override

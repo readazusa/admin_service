@@ -41,9 +41,4 @@
                 delete from t_wx_item_vs_file where itemid = #{id}
         </delete>
 
-
-
-
-
-
 </mapper>

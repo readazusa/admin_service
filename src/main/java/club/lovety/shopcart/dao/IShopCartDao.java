@@ -1,7 +1,8 @@
 package club.lovety.shopcart.dao;
 
-import net.sunmingchun.www.base.dao.IDao;
-import net.sunmingchun.www.shopcart.po.ShopCartInfo;
+
+import club.lovety.base.dao.IDao;
+import club.lovety.shopcart.po.ShopCartInfo;
 
 /**
  * Created by 念梓  on 2016/8/25.

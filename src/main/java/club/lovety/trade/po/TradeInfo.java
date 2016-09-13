@@ -1,8 +1,5 @@
 package club.lovety.trade.po;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import net.sunmingchun.www.util.BaseDateSerializer;
-
 import java.util.Date;
 import java.util.List;
 
@@ -160,7 +157,6 @@ public class TradeInfo {
         this.status = status;
     }
 
-    @JsonSerialize(using = BaseDateSerializer.class)
     public Date getCreateTime() {
         return createTime;
     }

@@ -1,8 +1,9 @@
 package club.lovety.trade.dao;
 
-import net.sunmingchun.www.base.dao.IDao;
-import net.sunmingchun.www.trade.po.OrderInfo;
-import net.sunmingchun.www.trade.po.TradeInfo;
+
+import club.lovety.base.dao.IDao;
+import club.lovety.trade.po.OrderInfo;
+import club.lovety.trade.po.TradeInfo;
 
 import java.util.List;
 

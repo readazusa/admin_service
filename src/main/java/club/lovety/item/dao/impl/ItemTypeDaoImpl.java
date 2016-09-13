@@ -1,15 +1,16 @@
 package club.lovety.item.dao.impl;
 
-import net.sunmingchun.www.base.po.BaseSearchPO;
-import net.sunmingchun.www.item.dao.IItemTypeDao;
-import net.sunmingchun.www.item.po.ItemTypeInfo;
+
+import club.lovety.base.po.BaseSearchPO;
+import club.lovety.item.dao.IItemTypeDao;
+import club.lovety.item.po.ItemTypeInfo;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+
 
 /**
  * Created by 念梓  on 2016/8/15.

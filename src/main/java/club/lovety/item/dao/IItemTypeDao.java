@@ -1,7 +1,8 @@
 package club.lovety.item.dao;
 
-import net.sunmingchun.www.base.dao.IDao;
-import net.sunmingchun.www.item.po.ItemTypeInfo;
+
+import club.lovety.base.dao.IDao;
+import club.lovety.item.po.ItemTypeInfo;
 
 /**
  * Created by 念梓  on 2016/8/15.

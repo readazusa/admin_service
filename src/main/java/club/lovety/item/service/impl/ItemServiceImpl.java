@@ -1,24 +1,17 @@
 package club.lovety.item.service.impl;
 
-import net.sunmingchun.www.admin.user.po.UserPO;
-import net.sunmingchun.www.base.po.BasePagePO;
-import net.sunmingchun.www.base.po.BaseSearchPO;
-import net.sunmingchun.www.file.po.UploadFilePO;
-import net.sunmingchun.www.item.dao.IItemDao;
-import net.sunmingchun.www.item.dao.impl.ItemTypeDaoImpl;
-import net.sunmingchun.www.item.po.ItemInfo;
-import net.sunmingchun.www.item.po.ItemVsFilePO;
-import net.sunmingchun.www.item.service.IItemService;
-import net.sunmingchun.www.util.UuidUtils;
-import org.apache.commons.lang3.StringUtils;
+
+import club.lovety.base.po.BasePagePO;
+import club.lovety.base.po.BaseSearchPO;
+import club.lovety.item.dao.IItemDao;
+import club.lovety.item.po.ItemInfo;
+import club.lovety.item.service.IItemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -53,26 +46,8 @@ public class ItemServiceImpl implements IItemService {
     @Override
     @Transactional
     public void save(ItemInfo obj) {
-        Date nowItem= new Date();
-        obj.setListTime(nowItem);
-        obj.setUid(UuidUtils.getUpperUuid());
-        itemDao.save(obj);
-        String fileIds = obj.getFileIds();
-        if(StringUtils.isNoneBlank(fileIds)){
-            Arrays.asList(fileIds.split("&&")).forEach(e->{
-                ItemVsFilePO itemVsFilePO = new ItemVsFilePO();
-                itemVsFilePO.setFileId(e);
-                itemVsFilePO.setItemId(obj.getUid());
-                itemVsFilePO.setId(UuidUtils.getUpperUuid());
-                Date now = new Date();
-                itemVsFilePO.setCreateTime(now);
-                itemVsFilePO.setUpdateTime(now);
-                itemDao.saveItemVsFile(itemVsFilePO);
-            });
-        }
+
     }
-
-
 
     @Override
     public void deleteById(String uid) {
@@ -89,16 +64,7 @@ public class ItemServiceImpl implements IItemService {
         String fileIds = itemInfo.getFileIds();
         itemDao.update(itemInfo);
         itemDao.deleteItemVsFileByItemId(itemInfo.getUid());
-        Arrays.asList(fileIds.split("&&")).forEach(e->{
-            ItemVsFilePO itemVsFilePO = new ItemVsFilePO();
-            itemVsFilePO.setFileId(e);
-            itemVsFilePO.setItemId(itemInfo.getUid());
-            itemVsFilePO.setId(UuidUtils.getUpperUuid());
-            Date now = new Date();
-            itemVsFilePO.setCreateTime(now);
-            itemVsFilePO.setUpdateTime(now);
-            itemDao.saveItemVsFile(itemVsFilePO);
-        });
+
     }
 
     @Override
@@ -132,10 +98,6 @@ public class ItemServiceImpl implements IItemService {
         return null;
     }
 
-    @Override
-    public BasePagePO<ItemInfo> getBasePagePO(int pageIndex, int pageSize, UserPO userPO, int draw) {
-        return null;
-    }
 
     @Override
     public BasePagePO<ItemInfo> getBasePagePO(int pageIndex, int pageSize, String searchValue, String orderColumn, String orderValue, int draw) {
@@ -162,8 +124,5 @@ public class ItemServiceImpl implements IItemService {
         return basePagePO;
     }
 
-    @Override
-    public List<UploadFilePO> getUploadFileListByItemId(String itemId) {
-        return itemDao.getUploadFileListByItemId(itemId);
-    }
+
 }

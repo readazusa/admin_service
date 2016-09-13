@@ -1,8 +1,9 @@
 package club.lovety.trade.service;
 
-import net.sunmingchun.www.base.po.BasePagePO;
-import net.sunmingchun.www.base.service.IService;
-import net.sunmingchun.www.trade.po.TradeInfo;
+
+import club.lovety.base.po.BasePagePO;
+import club.lovety.base.service.IService;
+import club.lovety.trade.po.TradeInfo;
 
 /**
  * Created by 念梓  on 2016/8/17.

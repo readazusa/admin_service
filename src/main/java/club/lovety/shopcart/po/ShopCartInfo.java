@@ -1,6 +1,7 @@
 package club.lovety.shopcart.po;
 
-import net.sunmingchun.www.base.po.BasePO;
+
+import club.lovety.base.po.BasePO;
 
 /**
  * Created by 念梓  on 2016/8/15.
@@ -9,7 +10,7 @@ import net.sunmingchun.www.base.po.BasePO;
  * author: 念梓
  * des:
  */
-public class ShopCartInfo extends BasePO{
+public class ShopCartInfo extends BasePO {
 
     private  String itemId;
 
