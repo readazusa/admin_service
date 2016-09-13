@@ -12,6 +12,9 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by ty on 2016/9/13.
@@ -29,8 +32,25 @@ public class FdfsUploadFileController {
     public Object upload(HttpServletRequest request){
         Result result = new Result();
         MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
-        MultiValueMap<String,MultipartFile>  multiValueMap = multipartHttpServletRequest.getMultiFileMap();
+        MultipartFile multipartFile = multipartHttpServletRequest.getFile("asdasd");
+        System.out.println(new Date());
+        try {
+            multipartFile.transferTo(new File("D:"+ File.separator+"12.zip"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(new Date());
+//        MultiValueMap<String,MultipartFile>  multiValueMap = multipartHttpServletRequest.getMultiFileMap();
+//       multiValueMap.entrySet().forEach(e->{
+//           e.getValue();
+//       });
+
         return result;
+    }
+
+    @RequestMapping("test")
+    public String tets(){
+        return "upload";
     }
 
 

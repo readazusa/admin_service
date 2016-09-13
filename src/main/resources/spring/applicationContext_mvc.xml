@@ -35,11 +35,13 @@
         <property name="order" value="1"></property>
     </bean>
 
-	<!-- 文件上传解析器 -->
-	<bean id="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="3145728" />
-	</bean>
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10000000000000" />
+        <property name="maxUploadSizePerFile" value="1220000000"></property>
+    </bean>
+
+
 	
 	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">   
         <property name="defaultErrorView">     
