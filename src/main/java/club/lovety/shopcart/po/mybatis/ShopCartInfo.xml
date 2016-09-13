@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ShopCartInfo">
+
+    <select id="queryShopCartByItemId" parameterType="ShopCartInfo" resultType="ShopCartInfo">
+        select * from t_wx_shopcart where itemid = #{itemId} and openid = #{openId}
+    </select>
+
+
+    <update id="addShopCartNumByItemId" parameterType="ShopCartInfo">
+        update t_wx_shopcart set num = num +1  where itemid = #{itemId} and openid = #{openId}
+    </update>
+
+    <insert id="save" parameterType="ShopCartInfo">
+        insert into t_wx_shopcart(id,openid,nick,itemid,num,picurl,title,pirce,createtime,updatetime) VALUES (#{id},#{openId},#{nick},#{itemId},1,#{picUrl},#{title},#{price},#{createTime},#{updateTime})
+    </insert>
+</mapper>

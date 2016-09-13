@@ -21,7 +21,7 @@ public class Test1
 		ClientGlobal.init("G:/own_application/java_application/admin_service/target/classes/fdfs_client.conf");
 		System.out.println("network_timeout=" + ClientGlobal.g_network_timeout + "ms");
 		System.out.println("charset=" + ClientGlobal.g_charset);
-  		
+
 		TrackerGroup tg = new TrackerGroup(new InetSocketAddress[]{new InetSocketAddress("192.168.31.218", 22122)});
 		TrackerClient tc = new TrackerClient(tg);
 		

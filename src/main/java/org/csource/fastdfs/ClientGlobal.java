@@ -73,7 +73,6 @@ public class ClientGlobal {
             if (parts.length != 2) {
                 throw new MyException("the value of item \"tracker_server\" is invalid, the correct format is host:port");
             }
-
             tracker_servers[i] = new InetSocketAddress(parts[0].trim(), Integer.parseInt(parts[1].trim()));
         }
         g_tracker_group = new TrackerGroup(tracker_servers);
