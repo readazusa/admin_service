@@ -1,6 +1,7 @@
 package club.lovety.item.po;
 
-import net.sunmingchun.www.base.po.BasePO;
+
+import club.lovety.base.po.BasePO;
 
 import java.util.Date;
 
@@ -12,7 +13,7 @@ import java.util.Date;
  * 商品信息实体类
  *
  */
-public class ItemInfo extends BasePO{
+public class ItemInfo extends BasePO {
 
     private  String uid;
 

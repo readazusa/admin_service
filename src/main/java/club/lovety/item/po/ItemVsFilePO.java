@@ -1,6 +1,7 @@
 package club.lovety.item.po;
 
-import net.sunmingchun.www.base.po.BasePO;
+
+import club.lovety.base.po.BasePO;
 
 /**
  * Created by 念梓  on 2016/8/9.
@@ -9,7 +10,7 @@ import net.sunmingchun.www.base.po.BasePO;
  * author: 念梓
  * des:商品 文件关联表
  */
-public class ItemVsFilePO extends BasePO{
+public class ItemVsFilePO extends BasePO {
 
     private String itemId;
 

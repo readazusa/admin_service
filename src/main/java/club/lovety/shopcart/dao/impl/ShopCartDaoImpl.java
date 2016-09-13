@@ -1,8 +1,8 @@
 package club.lovety.shopcart.dao.impl;
 
-import net.sunmingchun.www.base.po.BaseSearchPO;
-import net.sunmingchun.www.shopcart.dao.IShopCartDao;
-import net.sunmingchun.www.shopcart.po.ShopCartInfo;
+import club.lovety.base.po.BaseSearchPO;
+import club.lovety.shopcart.dao.IShopCartDao;
+import club.lovety.shopcart.po.ShopCartInfo;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;

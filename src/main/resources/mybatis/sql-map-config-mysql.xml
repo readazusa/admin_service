@@ -9,47 +9,10 @@
         <setting name="aggressiveLazyLoading" value="false"/>
 	</settings>
     <typeAliases>
-        <typeAlias type="net.sunmingchun.www.base.po.BaseSearchPO" alias="BaseSearchPO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.user.po.UserPO" alias="UserPO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.user.po.UserRolePO" alias="UserRolePO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.role.po.RolePO" alias="RolePO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.role.po.RoleResourcePO" alias="RoleResourcePO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.resource.po.ResourcePO" alias="ResourcePO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.area.po.AreaPO" alias="AreaPO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.log.po.VisitLogPO" alias="VisitLogPO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.admin.log.po.OperationLogPO" alias="OperationLogPO"></typeAlias>
 
-        <typeAlias type="net.sunmingchun.www.item.po.ItemInfo" alias="ItemInfo"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.item.po.CommentInfo" alias="CommentInfo"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.item.po.ItemTypeInfo" alias="ItemTypeInfo"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.item.po.ItemVsFilePO" alias="ItemVsFilePO"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.file.po.UploadFilePO" alias="UploadFilePO"></typeAlias>
-
-        <typeAlias type="net.sunmingchun.www.shop.po.ShopInfo" alias="ShopInfo"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.trade.po.TradeInfo" alias="TradeInfo"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.trade.po.OrderInfo" alias="OrderInfo"></typeAlias>
-
-        <typeAlias type="net.sunmingchun.www.index.po.IndexPageInfo" alias="IndexPageInfo"></typeAlias>
-        <typeAlias type="net.sunmingchun.www.shopcart.po.ShopCartInfo" alias="ShopCartInfo"></typeAlias>
     </typeAliases>
     <mappers>
 
-        <mapper resource="net/sunmingchun/www/admin/user/po/mybatis/UserPO.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/admin/area/po/mybatis/AreaPO.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/admin/role/po/mybatis/RolePO.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/admin/resource/po/mybatis/ResourcePO.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/shiro/dao/mybatis/ShiroAuth.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/admin/log/po/mybatis/LogPO.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/item/po/mybatis/CommentInfo.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/item/po/mybatis/ItemInfo.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/item/po/mybatis/ItemTypeInfo.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/item/po/mybatis/ItemVsFilePO.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/file/po/mybatis/UploadFilePO.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/shop/po/mybatis/ShopInfo.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/trade/po/mybatis/TradeInfo.xml"></mapper>
-
-        <mapper resource="net/sunmingchun/www/index/po/mybatis/IndexPageInfo.xml"></mapper>
-        <mapper resource="net/sunmingchun/www/shopcart/po/mybatis/ShopCartInfo.xml"></mapper>
 
 
     </mappers>

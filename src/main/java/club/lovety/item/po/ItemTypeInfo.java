@@ -1,8 +1,8 @@
 package club.lovety.item.po;
 
+import club.lovety.base.po.BasePO;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import net.sunmingchun.www.base.po.BasePO;
-import net.sunmingchun.www.util.BaseDateSerializer;
+
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ import java.util.Date;
  * date on 2016/4/26.
  * Email:sunmch@163.com
  */
-public class ItemTypeInfo extends BasePO{
+public class ItemTypeInfo extends BasePO {
 
     private String uid;
 
@@ -43,7 +43,6 @@ public class ItemTypeInfo extends BasePO{
         this.name = name;
     }
 
-    @JsonSerialize(using = BaseDateSerializer.class)
     public Date getCreateTime() {
         return createTime;
     }
@@ -69,7 +68,6 @@ public class ItemTypeInfo extends BasePO{
     }
 
 
-    @JsonSerialize(using = BaseDateSerializer.class)
     public Date getUpdateTime() {
         return updateTime;
     }
