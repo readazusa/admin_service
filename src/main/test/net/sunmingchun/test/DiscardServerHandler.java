@@ -19,10 +19,10 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
         // Discard the received data silently.
 //
         ByteBuf in = (ByteBuf) msg;
-        int read = in.readableBytes();
-        int ca= in.capacity();
-        boolean b = in.release();
-        System.out.println("是否可读: "+in.isReadable());
+//        int read = in.readableBytes();
+//        int ca= in.capacity();
+//        boolean b = in.release();
+//        System.out.println("是否可读: "+in.isReadable());
 ////        long length = in.readLong();
 ////        int ca = in.capacity();
 ////        System.out.println("length: "+ length+" ,ca: "+ ca);
@@ -32,9 +32,8 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
                 System.out.flush();
             }
         } finally {
-//            ReferenceCountUtil.release(msg); // (2)
+            ReferenceCountUtil.release(msg); // (2)
         }
-//        System.out.println(in.toString(io.netty.util.CharsetUtil.US_ASCII));
     }
 
     @Override
